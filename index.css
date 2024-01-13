@@ -1,0 +1,73 @@
+/* classes */
+.type-1 {
+  animation: type-1 4s infinite linear;
+  animation-fill-mode: none;
+}
+
+.type-1:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* animations */
+@keyframes type-1 {
+  0% {
+    transform: rotate3d(-1, 1, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(-1, 1, 1, 360deg);
+  }
+}
+
+/* utils */
+.stage-800 {
+  perspective: 800px;
+  perspective-origin: 50% 240px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+}
+
+.box div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50% 0;
+  -webkit-transform-origin: 50% 50% 0;
+
+  border: 2px solid #6b2970;
+}
+
+.box .box-left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.box .box-right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.box .box-back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.box .box-top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.box .box-bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+.box .box-front {
+  transform: rotate(0) translateZ(150px);
+}
