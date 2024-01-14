@@ -56,5 +56,5 @@ function handleCoin() {
 
 document.addEventListener("DOMContentLoaded", () => {
   handleBox();
-  handleCoin();
+  // handleCoin();
 });
